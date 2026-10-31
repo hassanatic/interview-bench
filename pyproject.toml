@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interview-bench"
+version = "0.1.0"
+description = "Grade multi-part coding interview problems against hidden test cases, with time limits and a rubric report"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Hassan Abdullah"}]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+interview-bench = "interview_bench.cli:main"
+
+[tool.setuptools]
+packages = ["interview_bench", "interview_bench.problems"]
